@@ -15,7 +15,17 @@ const InputForma2 = () => {
 
   const [state, setState] = useState(preset);
 
+  const handleChange = (e) => {
+    console.log(e)
+    const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
 
+    setState({
+      ...state,
+      [name]: value
+    })
+  }
 
 
   return (
@@ -26,6 +36,7 @@ const InputForma2 = () => {
         type='text'
         name='message'
         value={state.message}
+        onChange={handleChange}
       />
       <button type="button" onClick={() => { setState(preset) }}>Clear</button>
       <button type="button" onClick={() => { setState(newYear) }}>Happy NY</button>
