@@ -1,10 +1,11 @@
+import InputForma2 from "./components/InputForma2";
 
 
 function App() {
   return (
     <div className="App">
    <>
-   <h1>input forma</h1>
+   <InputForma2/>
    </>
     </div>
   );
