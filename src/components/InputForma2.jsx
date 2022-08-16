@@ -1,4 +1,19 @@
+import { useState } from "react";
+
 const InputForma2 = ()=>{
+
+  const preset= {
+    message:""
+  }
+  const newYear= {
+    message:"Happy New Year!!!"
+  }
+  const happyBday= {
+    message:"Happy birthday to you!!!"
+  }
+
+
+  const [state, setState] = useState(preset);
 
 
 
@@ -10,8 +25,9 @@ const InputForma2 = ()=>{
       <input
       type='text'
       name='message'
+      value={state.message}
       />
-      <button type="button">Clear</button>
+      <button type="button" onClick={()=>{setState(preset)}}>Clear</button>
     </div>
   );
 };
