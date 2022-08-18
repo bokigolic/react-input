@@ -29,7 +29,8 @@ const InputForma2 = () => {
 
 
   return (
-    <div className='forma-boki'>
+    <div className="form-a">
+      <div className='form-b'>
       <h1>Form</h1>
       <label>Message</label>
       <input
@@ -41,6 +42,7 @@ const InputForma2 = () => {
       <button type="button" onClick={() => { setState(preset) }}>Clear</button>
       <button type="button" onClick={() => { setState(newYear) }}>Happy NY</button>
       <button type="button" onClick={() => { setState(happyBday) }}>Happy B-day</button>
+    </div>
     </div>
   );
 };
